@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/israel386/team-profile-generator#readme",
   "dependencies": {
-    "D": "^1.0.0",
-    "inquirer": "^9.0.0",
+    "inquirer": "^7.0.4",
     "jest": "^28.1.1"
   }
 }

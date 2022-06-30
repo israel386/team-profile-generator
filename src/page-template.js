@@ -12,7 +12,7 @@ const generateManager = projectManagerArr => {
                         <p>ID: ${id}</p>
                         <p>Email: <a href="mailto: ${email}">${email}</a></p>
                         ${role === "Manager" ? `<p>Office Number: ${officeNumber}</p>` : ''}
-                        ${role === "Engineer" ? `<p>Github: <a href="https://github.com/${github}">${github}</a></p>` : ''}
+                        ${role === "Engineer" ? `<p>GitHub: <a href="https://github.com/${github}">${github}</a></p>` : ''}
                         ${role === "Intern" ? `<p>School: ${school}</p>` : ''}
                     </div>
                 </div>       

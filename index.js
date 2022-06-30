@@ -13,22 +13,54 @@ const promptManager = (managerData) => {
             {
                 type: "input",
                 name: 'name',
-                message: "Enter manager's name: "
+                message: "Enter manager's name: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter name!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'id',
-                message: "Enter manager's employee ID: "
+                message: "Enter manager's employee ID: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter ID!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'email',
-                message: "Enter Manager's email adress: "
+                message: "Enter Manager's email adress: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter email!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'officeNumber',
-                message: "Enter manager's office number: "
+                message: "Enter manager's office number: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter office number!');
+                        return false;
+                    }
+                }
             }
         ]).then(managerDataA => {
             team.push({ ...managerDataA, role: 'Manager' });
@@ -62,22 +94,54 @@ const checkEngineer = () => {
             {
                 type: "input",
                 name: 'name',
-                message: "Enter Engineer's name: "
+                message: "Enter Engineer's name: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter name!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'id',
-                message: "Enter Engineer's employee ID: "
+                message: "Enter Engineer's employee ID: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter ID!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'email',
-                message: "Enter Engineer's email adress: "
+                message: "Enter Engineer's email adress: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter email!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'github',
-                message: "Enter Engineer's gitHub username: "
+                message: "Enter Engineer's gitHub username: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter GitHub username!');
+                        return false;
+                    }
+                }
             }
         ]).then(engineerData => {
             console.log(engineerData);
@@ -92,22 +156,54 @@ const checkIntern = () => {
             {
                 type: "input",
                 name: 'name',
-                message: "Enter Intern's name: "
+                message: "Enter Intern's name: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter name!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'id',
-                message: "Enter Intern's employee ID: "
+                message: "Enter Intern's employee ID: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter ID!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'email',
-                message: "Enter Intern's email adress: "
+                message: "Enter Intern's email adress: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter email!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
                 name: 'school',
-                message: "Enter school Intern is attending: "
+                message: "Enter school Intern is attending: ",
+                validate: descriptionInput => {
+                    if (descriptionInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter school!');
+                        return false;
+                    }
+                }
             }
         ]).then(internData => {
             console.log(internData);

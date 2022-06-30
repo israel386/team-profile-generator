@@ -7,7 +7,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const team = [];
 
-const promptManager = (managerData) => {
+const promptManager = () => {
     return inquirer
         .prompt([
             {
@@ -62,10 +62,10 @@ const promptManager = (managerData) => {
                     }
                 }
             }
-        ]).then(managerDataA => {
-            team.push({ ...managerDataA, role: 'Manager' });
+        ]).then(managerData => {
+            team.push({ ...managerData, role: 'Manager' });
             addMembers();
-            return managerDataA;
+            return managerData;
         })
 }
 
@@ -144,10 +144,9 @@ const checkEngineer = () => {
                 }
             }
         ]).then(engineerData => {
-            console.log(engineerData);
-            const engineer = new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github);
-            team.push({ ...engineer, role: 'Engineer' })
+            team.push({ ...engineerData, role: 'Engineer' });
             addMembers();
+            return engineerData;
         })
 }
 const checkIntern = () => {
@@ -206,10 +205,9 @@ const checkIntern = () => {
                 }
             }
         ]).then(internData => {
-            console.log(internData);
-            const intern = new Intern(internData.name, internData.id, internData.email, internData.school);
-            team.push({ ...intern, role: 'Intern' })
+            team.push({ ...internData, role: 'Manager' });
             addMembers();
+            return internData;
         })
 }
 const finishTeam = () => {

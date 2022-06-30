@@ -205,7 +205,7 @@ const checkIntern = () => {
                 }
             }
         ]).then(internData => {
-            team.push({ ...internData, role: 'Manager' });
+            team.push({ ...internData, role: 'Intern' });
             addMembers();
             return internData;
         })
